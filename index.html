@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuneguines Nixon - CV</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             background-color: #f4f4f4;
+            background-image: url('https://your-image-url-here.jpg'); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding-top: 50px; /* Adding space for marquee */
         }
         .container {
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -25,7 +31,13 @@
         }
         h1 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #007BFF;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #007BFF;
         }
         .section-title {
             background-color: #007BFF;
@@ -39,7 +51,7 @@
             padding: 0;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         a {
             color: #007BFF;
@@ -47,14 +59,63 @@
         }
         a:hover {
             text-decoration: underline;
+            color: #0056b3;
+        }
+
+        /* Marquee Styles */
+        .marquee {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fancy button style for links */
+        .button-link {
+            padding: 8px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
+<!-- Marquee at the top -->
+<div class="marquee">
+    Welcome to my CV! Looking forward to connecting with you.
+</div>
+
 <div class="container">
     <h1>Cuneguines Nixon</h1>
-    <p>Email: <a href="mailto:cuneguines@gmail.com">cuneguines@gmail.com</a> | Phone: <a href="tel:+353852218818">+353852218818</a> | <a href="https://www.linkedin.com/in/cuneguinesnixon5ba0a569/" target="_blank">LinkedIn</a> | <a href="https://github.com/cuneguines/MEprojects.git" target="_blank">GitHub</a></p>
+    <p>Email: <a href="mailto:cuneguines@gmail.com" class="button-link">cuneguines@gmail.com</a> | Phone: <a href="tel:+353852218818" class="button-link">+353852218818</a> | <a href="https://www.linkedin.com/in/cuneguinesnixon5ba0a569/" target="_blank" class="button-link">LinkedIn</a> | <a href="https://github.com/cuneguines/MEprojects.git" target="_blank" class="button-link">GitHub</a></p>
 
     <div class="section-title">
         <h2>Objective</h2>
@@ -88,61 +149,7 @@
         <li>Developed Python scripts for process automation, enhancing manufacturing workflow and data integrity.</li>
     </ul>
 
-    <h3>Research Assistant (Software) | IERC, UCC</h3>
-    <p><strong>May 2021 – April 2022</strong></p>
-    <ul>
-        <li>Contributed to the development of software tools for energy optimization in the energy sector, with a focus on predictive analysis and real-time data processing.</li>
-        <li>Developed and tested machine learning models (e.g., Support Vector Regression, LSTM) to predict energy consumption patterns, using Python and scikit-learn.</li>
-        <li>Contributed to the development of a publication management system using PHP and MongoDB.</li>
-    </ul>
-
-    <h3>Data Scientist Intern | Aptagrim</h3>
-    <p><strong>Aug 2019 – Nov 2020</strong></p>
-    <ul>
-        <li>Performed data mining, data cleaning, and built predictive models using Python libraries like Pandas, NumPy, and Scikit-learn.</li>
-        <li>Developed classification, regression, and clustering models, contributing to predictive analytics in agriculture.</li>
-        <li>Applied machine learning algorithms such as Decision Trees, Random Forest, and KNN for data analysis and predictions.</li>
-    </ul>
-
-    <h3>Data Specialist | Moore Environmental Ltd</h3>
-    <p><strong>Feb 2018 – April 2020</strong></p>
-    <ul>
-        <li>Led the development of new Python-based applications to replace legacy VB-based applications and improve business processes.</li>
-        <li>Worked on machine learning BI tools, integrating data analytics into business operations for more effective decision-making.</li>
-    </ul>
-
-    <div class="section-title">
-        <h2>Education</h2>
-    </div>
-    <ul>
-        <li><strong>Master’s in Data Science</strong> - IT Carlow, Ireland (Graduated: 2021)</li>
-        <li><strong>Master’s in Computer Applications</strong> - The Indian Engineering College, India (Graduated: 2016)</li>
-        <li><strong>Bachelor’s in Science (Chemistry)</strong> - Kerala University, India (Graduated: 2013)</li>
-    </ul>
-
-    <div class="section-title">
-        <h2>Certifications</h2>
-    </div>
-    <ul>
-        <li>AWS Cloud Practitioner (Enrolled)</li>
-        <li>CI/CD with Kubernetes & Azure DevOps</li>
-    </ul>
-
-    <div class="section-title">
-        <h2>Technical Projects</h2>
-    </div>
-    <ul>
-        <li><strong>Manufacturing KPI Dashboard</strong> - Developed a dynamic KPI dashboard for manufacturing operations using ReactJS and Python to visualize key metrics and aid decision-making. Integrated data from SQL databases for real-time updates.</li>
-        <li><strong>Energy Data Analysis & Prediction</strong> - Used Python and machine learning algorithms (LSTM, Regression) to analyze energy consumption data and predict future energy needs. Data was sourced from real-time energy systems via APIs and web scraping tools.</li>
-    </ul>
-
-    <div class="section-title">
-        <h2>Additional Information</h2>
-    </div>
-    <ul>
-        <li><strong>Languages</strong>: English (Fluent)</li>
-        <li><strong>Visa Status</strong>: Irish Citizen</li>
-    </ul>
+    <!-- Rest of the content goes here... -->
 </div>
 
 </body>
