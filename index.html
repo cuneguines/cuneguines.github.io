@@ -1,200 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuneguines Nixon - CV</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            
-            background-size: cover;
-            background-position: center;
-            color: red;
-            padding-top: 50px; /* Adding space for marquee */
-        }
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            font-size: 3rem;
-            font-weight: bold;
-            color: #007BFF;
-        }
-        h2 {
-            font-size: 2rem;
-            color: grey;
-        }
-        .section-title {
-            background-color: #007BFF;
-            color: grey;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-
-        /* Marquee Styles */
-        .marquee {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Fancy button style for links */
-        .button-link {
-            padding: 8px 20px;
-            background-color: #007BFF;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .button-link:hover {
-            background-color: #0056b3;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-            .container {
-                margin: 10px;
-                padding: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-            h2 {
-                font-size: 1.2rem;
-            }
-            .container {
-                margin: 5px;
-                padding: 10px;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cuneguines Nixon | Software Engineer & Data Scientist</title>
+<meta name="description" content="Software engineer and data scientist in Ireland: enterprise apps, SAP Business One integration, data pipelines and on-site AI.">
+<style>
+:root{--bg:#f6f6f3;--card:#fff;--ink:#14161a;--mute:#5d6470;--line:#e4e4de;--accent:#2f6bff;--chip:#eef2ff;--chipink:#2a4bd0}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0c0d10;--card:#15171c;--ink:#eceef2;--mute:#9aa1ae;--line:#242730;--accent:#6f9bff;--chip:#1c2236;--chipink:#9db8ff}}
+:root[data-theme=dark]{--bg:#0c0d10;--card:#15171c;--ink:#eceef2;--mute:#9aa1ae;--line:#242730;--accent:#6f9bff;--chip:#1c2236;--chipink:#9db8ff}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:8px 0 24px}
+nav b{letter-spacing:.02em}
+nav div{display:flex;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);text-decoration:none;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px}
+.hero{grid-column:span 8;display:flex;flex-direction:column;justify-content:space-between;min-height:320px}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.05;letter-spacing:-.03em;margin:10px 0 14px}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--mute);max-width:52ch}
+.pill{display:inline-flex;gap:8px;align-items:center;font-size:13px;color:var(--mute)}
+.dot{width:8px;height:8px;border-radius:50%;background:#2fbf71;box-shadow:0 0 0 4px rgba(47,191,113,.18)}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.side{grid-column:span 4;display:flex;flex-direction:column;justify-content:space-between}
+.stat{font-size:2.6rem;font-weight:700;letter-spacing:-.03em;line-height:1}
+.mute{color:var(--mute);font-size:14px}
+h2{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mute);margin-bottom:14px;font-weight:600}
+h3{font-size:1.15rem;letter-spacing:-.01em;margin-bottom:6px}
+.span4{grid-column:span 4}.span6{grid-column:span 6}.span8{grid-column:span 8}.span12{grid-column:span 12}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{background:var(--chip);color:var(--chipink);padding:5px 11px;border-radius:999px;font-size:13px;font-weight:500}
+.proj{transition:transform .2s,border-color .2s}
+.proj:hover{transform:translateY(-3px);border-color:var(--accent)}
+.proj p{color:var(--mute);font-size:15px;margin-bottom:14px}
+.tl{list-style:none;padding:0;display:grid;gap:16px}
+.tl li{display:grid;grid-template-columns:150px 1fr;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.tl li:last-child{border:0;padding:0}
+.tl b{display:block}
+.skills{display:grid;gap:12px}
+.skills div{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:start}
+.skills span{font-size:13px;color:var(--mute);padding-top:5px}
+footer{text-align:center;color:var(--mute);font-size:14px;margin-top:32px}
+@media(max-width:820px){.hero,.side,.span4,.span6,.span8{grid-column:span 12}.tl li,.skills div{grid-template-columns:1fr;gap:2px}.hero{min-height:0}}
+</style>
 </head>
 <body>
+<div class="wrap">
+<nav>
+  <b>CN.</b>
+  <div>
+    <a class="btn" href="https://github.com/YOUR-USERNAME">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
+    <button class="btn" id="theme" aria-label="Toggle theme">◐</button>
+  </div>
+</nav>
 
-<!-- Marquee at the top -->
-<div class="marquee">
-    Welcome to my CV! Looking forward to connecting with you.
+<main class="grid">
+  <section class="card hero">
+    <div>
+      <span class="pill"><i class="dot"></i> Open to new roles · Ireland</span>
+      <h1>Software engineer &amp; data scientist building <span>systems that last.</span></h1>
+      <p>I'm Cune. I own enterprise apps end to end, connect them to ERP data, and ship on-site AI that teams actually use.</p>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="mailto:cuneguines@gmail.com">Get in touch</a>
+      <a class="btn" href="#work">See my work</a>
+    </div>
+  </section>
+
+  <aside class="card side">
+    <div><div class="stat">2018</div><p class="mute">Building software and data systems since</p></div>
+    <div><div class="stat">4</div><p class="mute">Organisations across manufacturing, energy and environmental sectors</p></div>
+  </aside>
+
+  <section class="card span12" id="work">
+    <h2>Selected work</h2>
+    <div class="grid" style="gap:14px">
+      <article class="card proj span6">
+        <h3>NCR &amp; Digital Quality System</h3>
+        <p>Enterprise non-conformity reporting and quality platform at Kent Stainless, owned from planning through maintenance, with SAP Business One integration and automated reporting.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Laravel</span><span class="chip">Spring Boot</span><span class="chip">jQuery</span><span class="chip">SQL</span></div>
+      </article>
+      <article class="card proj span6">
+        <h3>On-site AI assistant</h3>
+        <p>Secure, locally hosted Llama + RAG assistant that lets engineers query internal manufacturing documents in natural language. Data never leaves the site.</p>
+        <div class="chips"><span class="chip">Llama</span><span class="chip">RAG</span><span class="chip">Python</span><span class="chip">Data pipelines</span></div>
+      </article>
+      <article class="card proj span6">
+        <h3>Energy data pipelines</h3>
+        <p>Ingestion pipelines and automated data collection for high-volume energy datasets at UCC's IERC, including QA testing and releases.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">PHP</span><span class="chip">MongoDB</span><span class="chip">SQL</span></div>
+      </article>
+      <article class="card proj span6">
+        <h3>Predictive modelling</h3>
+        <p>Full data science lifecycle at Aptagrim: feature engineering, Random Forest, SVM, KNN, K-means, regression, validated with cross-validation and hypothesis tests.</p>
+        <div class="chips"><span class="chip">scikit-learn</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Seaborn</span></div>
+      </article>
+    </div>
+    <p class="mute" style="margin-top:14px">Company systems are private. Public repos coming soon: <a href="https://github.com/YOUR-USERNAME?tab=repositories">browse on GitHub</a>.</p>
+  </section>
+
+  <section class="card span8">
+    <h2>Experience</h2>
+    <ul class="tl">
+      <li><span class="mute">May 2022 – Present</span><div><b>Software Engineer · Kent Stainless</b><span class="mute">NCR &amp; DQS ownership, SAP B1 integration, on-site AI, data engineering.</span></div></li>
+      <li><span class="mute">May 2021 – Apr 2022</span><div><b>Research Assistant (Software) · UCC IERC</b><span class="mute">Backend, APIs and scalable energy data pipelines.</span></div></li>
+      <li><span class="mute">Aug 2019 – Nov 2020</span><div><b>Data Scientist · Aptagrim</b><span class="mute">Supervised and unsupervised modelling, NLP, analytics.</span></div></li>
+      <li><span class="mute">Feb 2018 – Apr 2020</span><div><b>Data Specialist · Moore Environmental</b><span class="mute">Replaced legacy VB systems with Python and SQL; BI reporting.</span></div></li>
+    </ul>
+  </section>
+
+  <section class="card span4">
+    <h2>Education</h2>
+    <h3>MSc Data Science</h3><p class="mute" style="margin-bottom:12px">IT Carlow (SETU)</p>
+    <h3>MCA</h3><p class="mute" style="margin-bottom:12px">Manonmaniam Sundaranar University</p>
+    <h3>BSc Chemistry</h3><p class="mute" style="margin-bottom:12px">Kerala University</p>
+    <p class="mute">Now studying DevOps &amp; cloud-native technologies.</p>
+  </section>
+
+  <section class="card span12">
+    <h2>Toolkit</h2>
+    <div class="skills">
+      <div><span>Languages</span><div class="chips"><i class="chip">Python</i><i class="chip">PHP</i><i class="chip">Java</i><i class="chip">JavaScript</i><i class="chip">SQL</i><i class="chip">C / C++</i><i class="chip">Bash</i></div></div>
+      <div><span>Web &amp; backend</span><div class="chips"><i class="chip">Laravel</i><i class="chip">Spring Boot</i><i class="chip">REST APIs</i><i class="chip">jQuery</i><i class="chip">HTML5 / CSS3</i><i class="chip">Bootstrap</i></div></div>
+      <div><span>Data &amp; AI</span><div class="chips"><i class="chip">Pandas</i><i class="chip">scikit-learn</i><i class="chip">Llama + RAG</i><i class="chip">Scrapy</i><i class="chip">ETL</i></div></div>
+      <div><span>Databases</span><div class="chips"><i class="chip">MS SQL</i><i class="chip">MongoDB</i><i class="chip">Oracle</i><i class="chip">Hadoop</i><i class="chip">SAP Business One</i></div></div>
+      <div><span>Cloud &amp; DevOps</span><div class="chips"><i class="chip">AWS</i><i class="chip">Kubernetes</i><i class="chip">Git / GitHub</i><i class="chip">Linux</i><i class="chip">CI/CD</i></div></div>
+    </div>
+  </section>
+</main>
+
+<footer>Irish citizen · full working rights · English, Hindi, Malayalam<br>© <span id="y"></span> Cuneguines Nixon</footer>
 </div>
-
-<div class="container">
-    <h1>Cuneguines Nixon</h1>
-    <p>Email: <a href="mailto:cuneguines@gmail.com" class="button-link">cuneguines@gmail.com</a> | Phone: <a href="tel:+353852218818" class="button-link">+353852218818</a> | <a href="https://www.linkedin.com/in/cuneguinesnixon5ba0a569/" target="_blank" class="button-link">LinkedIn</a> | <a href="https://github.com/cuneguines/MEprojects.git" target="_blank" class="button-link">GitHub</a></p>
-
-    <div class="section-title">
-        <h2>Objective</h2>
-    </div>
-    <p>An adaptable and results-driven software engineer with a Master's in Data Science, seeking to leverage a strong background in Python development, data analysis, and automation within the biopharmaceutical and engineering sectors. Passionate about driving technological innovation in manufacturing processes and project engineering through software solutions. </p>
-
-    <div class="section-title">
-        <h2>Key Skills</h2>
-    </div>
-    <ul>
-        <li>Programming Languages: Python, Java, C++, PHP, HTML, JavaScript, SQL</li>
-        <li>Web Development: ReactJS, Bootstrap, CSS, PHP, jQuery, REST APIs</li>
-        <li>Data Engineering & Analysis: Python (Pandas, NumPy, Seaborn, Matplotlib), Tableau, Scikit-Learn, Streamlit, AWS</li>
-        <li>Automation & Scripting: Web Scraping (BeautifulSoup, Scrapy), Data Processing, API Integration</li>
-        <li>Cloud & DevOps: AWS Cloud Practitioner, Kubernetes, Azure DevOps, CI/CD</li>
-        <li>Databases: SQL (MySQL, MSSQL), MongoDB, NoSQL, Oracle</li>
-        <li>Software Development & Project Management: Agile, Git, GitHub, Version Control, SDLC</li>
-    </ul>
-
-    <div class="section-title">
-        <h2>Professional Experience</h2>
-    </div>
-    <h3>Software Engineer (R&D) | Kent Stainless Ltd</h3>
-    <p><strong>May 2022 – Present</strong></p>
-    <ul>
-        <li>Developed software tools for the manufacturing industry, including KPI dashboards and forecasting tools.</li>
-        <li>Led the Non-Conformity Reporting (NCR) system project from design to deployment, improving manufacturing quality control processes.</li>
-        <li>Migrated legacy processes to Python and ReactJS for improved performance and integration with emerging technologies.</li>
-        <li>Used machine learning for data analysis and forecasting, improving operational efficiency in manufacturing environments.</li>
-        <li>Employed Tableau BI for visualizing and analyzing manufacturing data, contributing to data-driven decision-making.</li>
-        <li>Developed Python scripts for process automation, enhancing manufacturing workflow and data integrity.</li>
-    </ul>
-
-    <!-- You can continue adding more sections as needed, for example: -->
-
-    <div class="section-title">
-        <h2>Education</h2>
-    </div>
-    <h3>Master’s in Data Science | University of Carlow</h3>
-    <p><strong>Graduated: 2021</strong></p>
-    <ul>
-        <li>Specialized in data analysis, machine learning, and automation techniques.</li>
-        <li>Thesis: "Predictive Modeling in Manufacturing Using Python and Machine Learning."</li>
-    </ul>
-
-    <div class="section-title">
-        <h2>Certifications</h2>
-    </div>
-    <ul>
-        <li>AWS Certified Cloud Practitioner</li>
-        <li>Certified ScrumMaster (CSM)</li>
-        <li>Google Analytics Certified</li>
-    </ul>
-
-
-
-
-      <div class="section-title">
-        <h2>Eligibilty</h2>
-    </div>
-    <ul>
-        <li>IRISH CITIZEN</li>
-     
-    </ul>
-
-</div>
-
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+var r=document.documentElement,b=document.getElementById('theme');
+try{var s=localStorage.getItem('theme');if(s)r.dataset.theme=s}catch(e){}
+b.onclick=function(){
+  var dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+  r.dataset.theme=dark?'light':'dark';
+  try{localStorage.setItem('theme',r.dataset.theme)}catch(e){}
+};
+</script>
 </body>
 </html>
